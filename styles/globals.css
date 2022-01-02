@@ -4,10 +4,50 @@
 
 :root {
     --background: #1b1b1b;
-    --bacgkroundAlt: #2c2c2c;
+    --background-alt: #2c2c2c;
     --secondary: #f8efd4;
+    --secondary-alt: #E5E1E6;
 }
 
 body {
-    @apply bg-background text-[#f8efd4]
+    @apply bg-background text-[#f8efd4];
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-alt);
+    border-radius: 6px;
+}
+
+#scrollDown:before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-right: 0.2em solid var(--secondary);
+    border-top: 0.2em solid var(--secondary);
+    transform: rotate(135deg);
+    margin-right: 0.5em;
+    top: 96vh;
+    left: calc(50% - 0.2em);
+
+    animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+    50% {
+        transform: scale(1.5) rotate(135deg);
+    }
 }

@@ -3,7 +3,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                background: "#1b1b1b",
+                background: "var(--background)",
+                "background-alt": "var(--background-alt)",
+                secondary: "var(--secondary)",
             }
         },
     },
