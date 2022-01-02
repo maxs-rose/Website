@@ -1,10 +1,14 @@
-import DisplayButton from "@components/DisplayButton";
-import SocialButton from "@components/SocialButton";
+import About from "@components/About";
+import Landing from "@components/Landing";
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { AiFillIdcard, AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
+import { useRef } from "react";
 
 const Home: NextPage = () => {
+    const about = useRef(null);
+
+    const scrollDown = () => (about.current! as { scrollIntoView: (_: { block: string, behavior: string }) => void }).scrollIntoView({ block: "start", behavior: "smooth" });
+
     return (
             <>
                 <Head>
@@ -14,21 +18,13 @@ const Home: NextPage = () => {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <section className="w-full h-screen flex flex-col justify-center items-center select-none">
-                    <div className="max-w-xs ">
-                        <DisplayButton text="Max Rose"/>
-                        <div className="flex w-fill items-center justify-between pt-4">
-                            <SocialButton link="https://github.com/maxs-rose">
-                                <AiOutlineGithub/>
-                            </SocialButton>
-                            <SocialButton title="CV" link="cv" target="_self">
-                                <AiFillIdcard />
-                            </SocialButton>
-                            <SocialButton link="https://www.linkedin.com/in/maximilanrose/">
-                                <AiFillLinkedin/>
-                            </SocialButton>
-                        </div>
-                    </div>
+                    <Landing />
                 </section>
+                <span onClick={scrollDown} ref={about} id="scrollDown"/>
+                <section className="w-full flex flex-col justify-center items-center select-none">
+                        <About />
+                </section>
+                <div style={{ "padding": "2rem" }}/>
             </>
     )
 }

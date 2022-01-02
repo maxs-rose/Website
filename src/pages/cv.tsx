@@ -137,7 +137,7 @@ const CV = () => {
                             </span>
                             <span>
                                 <h3 className={h3}>Interested in (no industry experience)</h3>
-                                <p className="mt-2 mb-2">C#, C++, React, NextJS</p>
+                                <p className="mt-2 mb-2">C#, C++, React, NextJS, Prisma, Serverless Functions</p>
                             </span>
                         </div>
                     </section>
