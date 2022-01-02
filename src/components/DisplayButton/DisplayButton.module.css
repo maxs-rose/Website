@@ -1,0 +1,21 @@
+.textBorder {
+    background: linear-gradient(90deg, var(--background), var(--secondary), var(--background)) 0 -50%;
+    animation: spin 5s ease-in-out infinite;
+    padding: 3px;
+    background-size: 200% 200%;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.textBorder * {
+    background: var(--background);
+    border-radius: 0.3em;
+    padding: 1em;
+    font-size: xx-large;
+}
+
+@keyframes spin {
+    50% {
+        background-position: 100% 50%
+    }
+}

@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    background: white;
+    padding-bottom: 2rem;
+}
+
+.container section {
+    max-width: 60em;
+}
+
+.cvHeader h1 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 4rem;
+}
+
+.sectionList {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.sectionList > li {
+    font-weight: bold;
+}
+
+.sectionList > li ul {
+    font-weight: initial;
+}
+
+.sectionList ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+
+.sectionList a {
+    text-decoration: underline;
+}
+
+.sectionList a:hover {
+    font-style: italic;
+}

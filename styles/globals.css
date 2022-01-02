@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #1b1b1b;
+    --bacgkroundAlt: #2c2c2c;
+    --secondary: #f8efd4;
+}
+
+body {
+    @apply bg-background text-[#f8efd4]
+}
