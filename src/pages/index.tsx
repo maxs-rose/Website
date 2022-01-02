@@ -24,6 +24,7 @@ const Home: NextPage = () => {
                 <section className="w-full flex flex-col justify-center items-center select-none">
                         <About />
                 </section>
+                <div style={{ "padding": "2rem" }}/>
             </>
     )
 }

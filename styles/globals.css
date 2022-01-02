@@ -51,3 +51,12 @@ body::-webkit-scrollbar-thumb:hover {
         transform: scale(1.5) rotate(135deg);
     }
 }
+
+.badgeContainer > a {
+    margin: 0.5em;
+}
+
+.badgeContainer > a > svg {
+    width: 5em;
+    height: 5em;
+}
