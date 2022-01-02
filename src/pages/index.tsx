@@ -5,9 +5,9 @@ import Head from 'next/head'
 import { useRef } from "react";
 
 const Home: NextPage = () => {
-    const about = useRef(null);
+    const about = useRef<HTMLElement>(null);
 
-    const scrollDown = () => (about.current! as { scrollIntoView: (_: { block: string, behavior: string }) => void }).scrollIntoView({ block: "start", behavior: "smooth" });
+    const scrollDown = () => about.current?.scrollIntoView({ block: "start", behavior: "smooth" });
 
     return (
             <>
