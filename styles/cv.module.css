@@ -1,45 +1,28 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    background: white;
+    @apply flex flex-col items-center text-black bg-white;
     padding: 0 1em 2rem 1em;
 }
 
 .container section {
-    max-width: 60em;
-}
-
-.cvHeader h1 {
-    text-align: center;
-    padding: 2rem;
-    font-size: 4rem;
+    @apply max-w-[60em];
 }
 
 .sectionList {
-    list-style-type: disc;
-    list-style-position: inside;
+    @apply indent-4
 }
 
 .sectionList > li {
-    font-weight: bold;
+    @apply font-bold
 }
 
 .sectionList > li ul {
-    font-weight: initial;
+    @apply font-normal
 }
 
 .sectionList ul {
-    list-style-type: circle;
-    list-style-position: inside;
-    margin-left: 15px;
+    @apply list-disc list-inside indent-8;
 }
 
 .sectionList a {
-    text-decoration: underline;
-}
-
-.sectionList a:hover {
-    font-style: italic;
+    @apply underline hover:italic;
 }

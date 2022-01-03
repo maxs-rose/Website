@@ -1,8 +1,5 @@
 .social {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @apply flex flex-col justify-center items-center;
 }
 
 .social:hover {
@@ -10,6 +7,5 @@
 }
 
 .social svg {
-    height: 3rem;
-    width: 3rem;
+    @apply w-12 h-12;
 }

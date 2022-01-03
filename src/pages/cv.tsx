@@ -25,8 +25,8 @@ const CV = () => {
                     <meta name="description" content="Max Rose's CV"/>
                 </Head>
                 <div className={styles.container}>
-                    <section className={styles.cvHeader}>
-                        <h1>Maximilian Rose</h1>
+                    <section>
+                        <h1 className="text-center p-8 text-6xl">Maximilian Rose</h1>
                         <p>
                             I am an ambitious and responsible individual highly motivated to pursue a career in the
                             technology field currently working as a full stack engineer at MRI Software.
@@ -133,11 +133,11 @@ const CV = () => {
                         <div>
                             <span>
                                 <h3 className={h3}>Industry experience</h3>
-                                <p className="mt-2 mb-2">Java, API Design, Angular, TypeScript</p>
+                                <p className="mt-2 mb-2 indent-4">Java, API Design, Angular, TypeScript</p>
                             </span>
                             <span>
                                 <h3 className={h3}>Interested in (no industry experience)</h3>
-                                <p className="mt-2 mb-2">C#, C++, React, NextJS, Prisma, Serverless Functions</p>
+                                <p className="mt-2 mb-2 indent-4">C#, C++, React, NextJS, Prisma, Serverless Functions</p>
                             </span>
                         </div>
                     </section>
