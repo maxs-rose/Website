@@ -18,11 +18,11 @@ const Home: NextPage = () => {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <section className="w-full h-screen flex flex-col justify-center items-center select-none">
-                    <Landing />
+                    <Landing/>
                 </section>
                 <span onClick={scrollDown} ref={about} id="scrollDown"/>
                 <section className="w-full flex flex-col justify-center items-center select-none">
-                        <About />
+                    <About/>
                 </section>
                 <div style={{ "padding": "2rem" }}/>
             </>

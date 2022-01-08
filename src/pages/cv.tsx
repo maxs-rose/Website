@@ -10,6 +10,8 @@ const h2 = "text-4xl mb-2 text-center";
 const h3 = "text-2xl";
 const h4 = "text-xl";
 
+const contactItem = "flex justify-center items-center space-x-1 mx-3 hover:italic";
+
 const sectionStart = "flex flex-col justify-start mt-2 w-full space-y-2";
 const sectionItemHeader = "flex flex-col space-y-2";
 const sectionHeading = "flex items-center space-x-4";
@@ -37,14 +39,14 @@ const CV = () => {
                     </section>
                     <section className="flex flex-col justify-center mt-2">
                         <h2 className={h2}>Contact</h2>
-                        <div className="grid gap-4 grid-cols-3">
-                            <span className="flex justify-center items-center space-x-1"><BsPhoneFill/> <span>07753 660179</span></span>
-                            <a href="mailto:max.rose366@gmail.com?subject=Contact from Website" className="flex justify-center items-center space-x-1"><GrMail/> <span>max.rose366@gmail.com</span></a>
-                            <Link href="/"><a target="_blank" rel="noreferrer" className="flex justify-center items-center space-x-1"><MdWebAsset/> <span>max-rose.com</span></a></Link>
+                        <div className="flex flex-row flex-wrap justify-evenly max-w-lg">
+                            <span className={contactItem}><BsPhoneFill/> <span>07753 660179</span></span>
+                            <a href="mailto:max.rose366@gmail.com?subject=Contact from Website" className={contactItem}><GrMail/> <span>max.rose366@gmail.com</span></a>
+                            <Link href="/"><a target="_blank" rel="noreferrer" className={contactItem}><MdWebAsset/> <span>max-rose.com</span></a></Link>
                             <a href="https://github.com/maxs-rose"
-                               rel="noreferrer" className="flex justify-center items-center space-x-1"><AiOutlineGithub/> <span>github.com/maxs-rose</span></a>
+                               rel="noreferrer" className={contactItem}><AiOutlineGithub/> <span>github.com/maxs-rose</span></a>
                             <a href="https://www.linkedin.com/in/maximilanrose/"
-                               rel="noreferrer" className="flex justify-center items-center space-x-1"><AiFillLinkedin/> <span>linkedin.com/in/maximilanrose</span></a>
+                               rel="noreferrer" className={contactItem}><AiFillLinkedin/> <span>linkedin.com/in/maximilanrose</span></a>
                         </div>
                     </section>
                     <section className={sectionStart}>
