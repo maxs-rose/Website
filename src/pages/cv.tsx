@@ -68,7 +68,7 @@ const CV = () => {
                                             <li>System to identify when tenants of a housing provider are likely not miss a rent payment and alert the provider before the payment is missed</li>
                                             <li>Worked on integrations with other software</li>
                                             <li>Implemented custom features for clients upon request</li>
-                                            <li>Rebuilt CI pipline to improve efficiency</li>
+                                            <li>Rebuilt CI pipeline to improve efficiency</li>
                                             <li>Handled various technical support issues as 3rd line support</li>
                                             <li>Tech: Java (Dropwizard API), Angular, TypeScript, PostgreSQL, Auth0, GitLab CI</li>
                                         </ul>
