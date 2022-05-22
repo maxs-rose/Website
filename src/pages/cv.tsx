@@ -55,7 +55,7 @@ const CV = () => {
                             <span className={sectionItemHeader}>
                                 <div className={sectionHeading}>
                                     <h3 className={h3}>MRI Software</h3>
-                                    <small>2020 - present</small>
+                                    <small>2021 - present</small>
                                 </div>
                                 <small>Title: Software Engineer I</small>
                                 <small>Role: Fullstack software engineer and lead for small internal projects</small>
@@ -98,7 +98,7 @@ const CV = () => {
                             <span className={sectionItemHeader}>
                                 <div className={sectionHeading}>
                                     <h3 className={h3}>Newcastle University (BSc)</h3>
-                                    <small>2018 - 2020</small>
+                                    <small>2018 - 2021</small>
                                 </div>
                                 <small>Result: First Class Degree with Honours (80.1%)</small>
                             </span>
