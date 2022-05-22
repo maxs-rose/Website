@@ -31,7 +31,7 @@ const CV = () => {
                         <h1 className="text-center p-8 text-6xl">Maximilian Rose</h1>
                         <p>
                             I am an ambitious and responsible individual highly motivated to pursue a career in the
-                            technology field currently working as a full stack engineer at MRI Software.
+                            technology field currently working as a full stack engineer software engineer.
                             I am a fast learner and a comprehensive person.
                             I have an interest in cyber-physical systems with my dissertation concerning improving the
                             design space exploration techniques available within the INTO-CPS co-modelling
@@ -66,14 +66,26 @@ const CV = () => {
                                     <li><a href="https://www.mrisoftware.com/uk/products/income-analytics/" target="_blank" rel="noreferrer">Income Analytics</a>
                                         <ul>
                                             <li>System to identify when tenants of a housing provider are likely not miss a rent payment and alert the provider before the payment is missed</li>
-                                            <li>Tech: Java (Dropwizard API), Angular, TypeScript, PostgreSQL, Auth0</li>
+                                            <li>Worked on integrations with other software</li>
+                                            <li>Implemented custom features for clients upon request</li>
+                                            <li>Rebuilt CI pipline to improve efficiency</li>
+                                            <li>Handled various technical support issues as 3rd line support</li>
+                                            <li>Tech: Java (Dropwizard API), Angular, TypeScript, PostgreSQL, Auth0, GitLab CI</li>
                                         </ul>
                                     </li>
                                     <li>Income Analytics: Data Generator
                                         <ul>
-                                            <li>The is a project that I took the lead on</li>
+                                            <li>This is a project that I took the lead on</li>
                                             <li>Project was to generate random but repeatable test data that can be used during development of the system to endure that all features worked as intended</li>
                                             <li>Tech: Java, Bash</li>
+                                        </ul>
+                                    </li>
+                                    <li>Renovate Bot
+                                        <ul>
+                                            <li>Another project that I have taken the lead on</li>
+                                            <li>The team uses GitLab to host their repos and to allow for automatic dependency updates I setup <a href="https://www.whitesourcesoftware.com/free-developer-tools/renovate/">Renovate Bot</a> in GitLab to handle this automatically</li>
+                                            <li>After it was setup for my team I demoed the bot to other teams in the company and they are now using it as well</li>
+                                            <li>Tech: GitLab CI, JS</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -139,7 +151,7 @@ const CV = () => {
                             </span>
                             <span>
                                 <h3 className={h3}>Interested in (no industry experience)</h3>
-                                <p className="mt-2 mb-2 indent-4">C#, C++, React, NextJS, Prisma, Serverless Functions</p>
+                                <p className="mt-2 mb-2 indent-4">C#, C++, React, NextJS, NestJS, Microservices & Monorepos, Prisma, Serverless Functions</p>
                             </span>
                         </div>
                     </section>
