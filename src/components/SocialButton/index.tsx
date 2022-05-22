@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styles from "./SocialButton.module.css"
 
-const SocialButton: React.FC<{ link?: string, title?: string, target?: "_self" | "_blank" }> = ({ children, link, title, target = "_blank"}) => {
+const SocialButton: React.FC<{ children?: ReactNode, link?: string, title?: string, target?: "_self" | "_blank" }> = ({ children, link, title, target = "_blank"}) => {
     const displayTitle = () => {
         if(title && !link)
             return <p>{title}</p>
