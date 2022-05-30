@@ -46,7 +46,7 @@ const KeyboardInput: React.FC<{ keybindings: Map<string, () => void> }> = ({keyb
 
 	const showAvailableCommands = (available: string[]) => {
 		return (
-			<ul className="bg-background p-2">
+			<ul className="bg-background p-2 w-fit">
 				<li>{available.length > 0 ? "Possible commands:" : "Unknown Command"}</li>
 				{available.sort().map(c => <li key={c}>:{c}</li>)}
 				<li>Press Escape (esc) to cancel</li>
