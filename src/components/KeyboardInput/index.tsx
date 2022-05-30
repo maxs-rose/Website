@@ -8,14 +8,17 @@ const KeyboardInput: React.FC<{ keybindings: Map<string, () => void> }> = ({keyb
 	const [availableCommands, setAvailableCommands] = useState([] as string[]);
 
 	const processKeypress = useCallback(({ key }: KeyboardEvent) => {
+		// Clear all input
 		if(key === "Escape") {
 			inputKeys.current = "";
 			setDisplayKeys(inputKeys.current);
 		}
+		// Remove last character
 		else if(key === "Backspace" && inputKeys.current.length >= 1) {
 			inputKeys.current = inputKeys.current.slice(0, -1);
 			setDisplayKeys(inputKeys.current);
 		}
+		// Do nothing if we get a non character
 		else if(key.length > 1)
 			return;
 		else if(inputKeys.current.length >= 1 || key === ":" ) {
@@ -23,6 +26,13 @@ const KeyboardInput: React.FC<{ keybindings: Map<string, () => void> }> = ({keyb
 			setDisplayKeys(inputKeys.current);
 		}
 	}, []);
+
+	const runKeybinding = useCallback((input: string) => {
+		inputKeys.current = "";
+		setDisplayKeys(inputKeys.current);
+		setAvailableCommands([]);
+		keybindings.get(input)!.apply(null);
+	}, [keybindings]);
 
 	useEffect(() => {
 		window.addEventListener("keydown", processKeypress);
@@ -33,16 +43,14 @@ const KeyboardInput: React.FC<{ keybindings: Map<string, () => void> }> = ({keyb
 	}, [processKeypress]);
 	
 	useEffect(() => {
-		const keys = displayKeys.replace(":", "").toLowerCase();
-		if(keybindings.has(keys)) {
-			inputKeys.current = "";
-			setDisplayKeys(inputKeys.current);
-			setAvailableCommands([]);
-			keybindings.get(keys)!.apply(null);
-		} else {
-			setAvailableCommands(Array.from(keybindings.keys()).filter(k => k.startsWith(keys.slice(0))))
-		}
-	}, [displayKeys, keybindings]);
+		const input = displayKeys.replace(":", "").toLowerCase();
+
+		if(keybindings.has(input))
+			runKeybinding(input);
+		else
+			setAvailableCommands(Array.from(keybindings.keys()).filter(k => k.startsWith(input)));
+
+	}, [displayKeys, keybindings, runKeybinding]);
 
 	const showAvailableCommands = (available: string[]) => {
 		return (
