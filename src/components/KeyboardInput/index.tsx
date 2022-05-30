@@ -5,6 +5,8 @@ const KeyboardInput: React.FC<{ keybindings: Map<string, () => void> }> = ({keyb
 	const [displayKeys, setDisplayKeys] = useState("");
 	const inputKeys = useRef("");
 
+	const [availableCommands, setAvailableCommands] = useState([] as string[]);
+
 	const processKeypress = useCallback(({ key }: KeyboardEvent) => {
 		if(key === "Escape") {
 			inputKeys.current = "";
@@ -35,11 +37,29 @@ const KeyboardInput: React.FC<{ keybindings: Map<string, () => void> }> = ({keyb
 		if(keybindings.has(keys)) {
 			inputKeys.current = "";
 			setDisplayKeys(inputKeys.current);
+			setAvailableCommands([]);
 			keybindings.get(keys)!.apply(null);
+		} else {
+			setAvailableCommands(Array.from(keybindings.keys()).filter(k => k.startsWith(keys.slice(0))))
 		}
-	}, [displayKeys, keybindings])
+	}, [displayKeys, keybindings]);
 
-	return <div className="fixed w-full bg-background">{displayKeys}</div>
+	const showAvailableCommands = (available: string[]) => {
+		return (
+			<ul className="bg-background p-2">
+				<li>{available.length > 0 ? "Possible commands:" : "Unknown Command"}</li>
+				{available.sort().map(c => <li key={c}>:{c}</li>)}
+				<li>Press Escape (esc) to cancel</li>
+			</ul>
+		)
+	}
+
+	return (
+		<div className="fixed">
+			<div className="w-full bg-background">{displayKeys}</div>
+			{displayKeys.length > 0 ? showAvailableCommands(availableCommands) : <></>}
+		</div>
+	)
 }
 
 export default KeyboardInput;
