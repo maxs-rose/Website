@@ -4,7 +4,7 @@ import styles from "@styles/cv.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useContext, useEffect } from "react";
+import { RefObject, useContext, useEffect, useRef } from "react";
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { BsPhoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
@@ -26,11 +26,29 @@ const CV = () => {
     const context = useContext(KeyboardContext);
     const router = useRouter();
 
+    const title = useRef<HTMLElement>(null);
+    const contact = useRef<HTMLElement>(null);
+    const employment = useRef<HTMLElement>(null);
+    const education = useRef<HTMLElement>(null);
+    const tech = useRef<HTMLElement>(null);
+
+    const scrollTo = (ref: RefObject<HTMLElement>) => () => ref.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+
     useEffect(() => {
         context.add("home", () => router.push("/").then());
+        context.add("title", scrollTo(title));
+        context.add("contact", scrollTo(contact));
+        context.add("emp", scrollTo(employment));
+        context.add("edu", scrollTo(education));
+        context.add("tech", scrollTo(tech));
 
         return () => {
             context.remove("home");
+            context.remove("title");
+            context.remove("contact");
+            context.remove("emp");
+            context.remove("edu");
+            context.remove("tech");
         }
     }, [context, router])
 
@@ -42,7 +60,7 @@ const CV = () => {
                     <meta name="description" content="Max Rose's CV"/>
                 </Head>
                 <div className={styles.container}>
-                    <section>
+                    <section ref={title}>
                         <h1 className="text-center p-8 text-6xl">Maximilian Rose</h1>
                         <p>
                             I am an ambitious and responsible individual highly motivated to pursue a career in the
@@ -52,7 +70,7 @@ const CV = () => {
                             design space exploration techniques available within the INTO-CPS co-modelling
                             toolchain.</p>
                     </section>
-                    <section className="flex flex-col justify-center mt-2">
+                    <section className="flex flex-col justify-center mt-2" ref={contact}>
                         <h2 className={h2}>Contact</h2>
                         <div className="flex flex-row flex-wrap justify-evenly max-w-lg">
                             <span className={contactItem}><BsPhoneFill/> <span>07753 660179</span></span>
@@ -64,7 +82,7 @@ const CV = () => {
                                rel="noreferrer" className={contactItem}><AiFillLinkedin/> <span>linkedin.com/in/maximilanrose</span></a>
                         </div>
                     </section>
-                    <section className={sectionStart}>
+                    <section className={sectionStart} ref={employment}>
                         <h2 className={h2}>Employment</h2>
                         <div>
                             <span className={sectionItemHeader}>
@@ -107,7 +125,7 @@ const CV = () => {
                             </span>
                         </div>
                     </section>
-                    <section className={sectionStart}>
+                    <section className={sectionStart} ref={education}>
                         <h2 className={h2}>Education</h2>
                         <div>
                             <span className={sectionItemHeader}>
@@ -157,7 +175,7 @@ const CV = () => {
                             </span>
                         </div>
                     </section>
-                    <section className={sectionStart}>
+                    <section className={sectionStart} ref={tech}>
                         <h2 className={h2}>Tech</h2>
                         <div>
                             <span>
