@@ -1,22 +1,13 @@
 import DisplayButton from "@components/DisplayButton";
 import SocialButton from "@components/SocialButton";
 import { githubLink, linkedinLink } from "@constants/*";
-import { KeyboardContext } from "@pages/_app";
+import useKeybindings from "@hooks/useKeybindings";
 import { useRouter } from "next/router";
-import { useContext, useEffect } from "react";
 import { AiFillIdcard, AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 
 const Landing = () => {
-    const context = useContext(KeyboardContext);
     const router = useRouter();
-
-    useEffect(() => {
-        context.add("cv", () => router.push("cv").then());
-
-        return () => {
-            context.remove("cv");
-        }
-    }, [context, router])
+    useKeybindings("cv", () => router.push("cv").then());
 
     return (
             <div className="max-w-xs ">

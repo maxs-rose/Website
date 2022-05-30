@@ -1,10 +1,10 @@
 import { githubLink, linkedinLink } from "@constants/*";
-import { KeyboardContext } from "@pages/_app";
+import useKeybindings from "@hooks/useKeybindings";
 import styles from "@styles/cv.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { RefObject, useContext, useEffect, useRef } from "react";
+import { RefObject, useRef } from "react";
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { BsPhoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
@@ -23,9 +23,7 @@ const sectionHeading = "flex items-center space-x-4";
 const sectionBody = "flex flex-col space-y-2 mt-2 list-list-disc"
 
 const CV = () => {
-    const context = useContext(KeyboardContext);
     const router = useRouter();
-
     const title = useRef<HTMLElement>(null);
     const contact = useRef<HTMLElement>(null);
     const employment = useRef<HTMLElement>(null);
@@ -34,23 +32,12 @@ const CV = () => {
 
     const scrollTo = (ref: RefObject<HTMLElement>) => () => ref.current?.scrollIntoView({ block: "start", behavior: "smooth" });
 
-    useEffect(() => {
-        context.add("home", () => router.push("/").then());
-        context.add("title", scrollTo(title));
-        context.add("contact", scrollTo(contact));
-        context.add("emp", scrollTo(employment));
-        context.add("edu", scrollTo(education));
-        context.add("tech", scrollTo(tech));
-
-        return () => {
-            context.remove("home");
-            context.remove("title");
-            context.remove("contact");
-            context.remove("emp");
-            context.remove("edu");
-            context.remove("tech");
-        }
-    }, [context, router])
+    useKeybindings("home", () => router.push("/").then());
+    useKeybindings("title", scrollTo(title));
+    useKeybindings("contact",scrollTo(contact));
+    useKeybindings("emp", scrollTo(employment));
+    useKeybindings("edu", scrollTo(education));
+    useKeybindings("tech", scrollTo(tech));
 
     return (
             <>

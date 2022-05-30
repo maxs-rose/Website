@@ -1,13 +1,20 @@
 import KeyboardInput from "@components/KeyboardInput";
-import { githubLink, linkedinLink } from "@constants/*";
+import { githubLink, KeyboardContextType, linkedinLink } from "@constants/*";
+import useKeybindings from "@hooks/useKeybindings";
 import '@styles/globals.css'
 import type { AppProps } from 'next/app'
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 
-export type KeyboardContextType = { add: (key: string, callback: () => void) => void, remove: (key: string) => boolean }
 export const KeyboardContext = createContext<KeyboardContextType>({ add: (_, __) => false, remove: (_) => false});
 
 const bindingMap = new Map<string, () => void>();
+
+const GlobalKeybindings: React.FC = () => {
+  useKeybindings("git", () => window.open(githubLink, "_blank"));
+  useKeybindings("in", () => window.open(linkedinLink, "_blank"));
+
+  return <></>;
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [bindings, setBindings] = useState(new Map<string, () => void>());
@@ -30,17 +37,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     return deleted;
   }
 
-  useEffect(() => {
-    addBinding("git", () => window.open(githubLink, "_blank"))
-    addBinding("in", () => window.open(linkedinLink, "_blank"))
-  }, [])
-
   return (
       <KeyboardContext.Provider value={{ add: addBinding, remove: removeBinding }}>
-        <KeyboardInput keybindings={bindings}></KeyboardInput>
+        <GlobalKeybindings />
+        <KeyboardInput keybindings={bindings} />
         <Component {...pageProps} />
       </KeyboardContext.Provider>
   )
 }
 
-export default MyApp
+export default MyApp;

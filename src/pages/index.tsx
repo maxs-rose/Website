@@ -1,27 +1,19 @@
 import About from "@components/About";
 import Landing from "@components/Landing";
-import { KeyboardContext } from "@pages/_app";
+import useKeybindings from "@hooks/useKeybindings";
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useContext, useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const Home: NextPage = () => {
-    const context = useContext(KeyboardContext);
     const about = useRef<HTMLElement>(null);
     const landing = useRef<HTMLElement>(null);
 
     const scrollDown = () => about.current?.scrollIntoView({ block: "start", behavior: "smooth" });
     const scrollUp = () => landing.current?.scrollIntoView({ block: "start", behavior: "smooth" });
 
-    useEffect(() => {
-        context.add("about", scrollDown);
-        context.add("home", scrollUp);
-
-        return () => {
-            context.remove("about");
-            context.remove("home")
-        }
-    }, [context])
+    useKeybindings("about", scrollDown);
+    useKeybindings("home", scrollUp);
 
     return (
             <>
@@ -43,4 +35,4 @@ const Home: NextPage = () => {
     )
 }
 
-export default Home
+export default Home;

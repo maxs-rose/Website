@@ -31,7 +31,10 @@
       ],
       "@constants/*": [
         "./src/constants.ts"
-      ]
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
     }
   },
   "include": [
