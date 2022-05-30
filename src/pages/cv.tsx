@@ -1,6 +1,10 @@
+import { githubLink, linkedinLink } from "@constants/*";
+import { KeyboardContext } from "@pages/_app";
 import styles from "@styles/cv.module.css";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useContext, useEffect } from "react";
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { BsPhoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
@@ -19,6 +23,17 @@ const sectionHeading = "flex items-center space-x-4";
 const sectionBody = "flex flex-col space-y-2 mt-2 list-list-disc"
 
 const CV = () => {
+    const context = useContext(KeyboardContext);
+    const router = useRouter();
+
+    useEffect(() => {
+        context.add("home", () => router.push("/").then());
+
+        return () => {
+            context.remove("home");
+        }
+    }, [context, router])
+
     return (
             <>
                 <Head>
@@ -43,9 +58,9 @@ const CV = () => {
                             <span className={contactItem}><BsPhoneFill/> <span>07753 660179</span></span>
                             <a href="mailto:max.rose366@gmail.com?subject=Contact from Website" className={contactItem}><GrMail/> <span>max.rose366@gmail.com</span></a>
                             <Link href="/"><a target="_blank" rel="noreferrer" className={contactItem}><MdWebAsset/> <span>max-rose.com</span></a></Link>
-                            <a href="https://github.com/maxs-rose" target="_blank"
+                            <a href={githubLink} target="_blank"
                                rel="noreferrer" className={contactItem}><AiOutlineGithub/> <span>github.com/maxs-rose</span></a>
-                            <a href="https://www.linkedin.com/in/maximilanrose/"  target="_blank"
+                            <a href={linkedinLink}  target="_blank"
                                rel="noreferrer" className={contactItem}><AiFillLinkedin/> <span>linkedin.com/in/maximilanrose</span></a>
                         </div>
                     </section>
