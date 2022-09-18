@@ -87,11 +87,13 @@ const CV = () => {
                                 <ul className={styles.sectionList}>
                                     <li><a href="https://www.mrisoftware.com/uk/products/income-analytics/" target="_blank" rel="noreferrer">Income Analytics</a>
                                         <ul>
-                                            <li>System to identify when tenants of a housing provider are likely not miss a rent payment and alert the provider before the payment is missed</li>
+                                            <li>Income Analytics is a system to identify when tenants of a housing provider are likely not miss a rent payment and alert the provider before the payment is missed</li>
                                             <li>Worked on integrations with other software</li>
                                             <li>Implemented custom features for clients upon request</li>
                                             <li>Rebuilt CI pipeline to improve efficiency</li>
                                             <li>Handled various technical support issues as 3rd line support</li>
+                                            <li>Worked on implementing e2e performance testing</li>
+                                            <li>Investigated and implemented Server Sent Events after comparison with alternative options</li>
                                             <li>Tech: Java (Dropwizard API), Angular, TypeScript, PostgreSQL, Auth0, GitLab CI</li>
                                         </ul>
                                     </li>
@@ -200,6 +202,16 @@ const CV = () => {
                                 <h3 className={h3}>Interested in (no industry experience)</h3>
                                 <p className="mt-2 mb-2 indent-4">C#, C++, React, NextJS, NestJS, Microservices & Monorepos, Prisma, Serverless Functions</p>
                             </span>
+                        </div>
+                    </section>
+                    <section className={sectionStart} ref={tech}>
+                        <h2 className={h2}>Other Skills & Qualifications</h2>
+                        <div>
+                            <ul>
+                                <li></li>
+                                <li>Certified SolidWorks mechanical design professional</li>
+                                <li>Archery</li>
+                            </ul>
                         </div>
                     </section>
                 </div>
