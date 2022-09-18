@@ -27,6 +27,7 @@ const CV = () => {
     const title = useRef<HTMLElement>(null);
     const contact = useRef<HTMLElement>(null);
     const employment = useRef<HTMLElement>(null);
+    const projects = useRef<HTMLElement>(null);
     const education = useRef<HTMLElement>(null);
     const tech = useRef<HTMLElement>(null);
 
@@ -36,6 +37,7 @@ const CV = () => {
     useKeybindings("title", scrollTo(title));
     useKeybindings("contact",scrollTo(contact));
     useKeybindings("emp", scrollTo(employment));
+    useKeybindings("prod", scrollTo(projects));
     useKeybindings("edu", scrollTo(education));
     useKeybindings("tech", scrollTo(tech));
 
@@ -108,6 +110,31 @@ const CV = () => {
                                             <li>Tech: GitLab CI, JS</li>
                                         </ul>
                                     </li>
+                                </ul>
+                            </span>
+                        </div>
+                    </section>
+                    <section className={sectionStart} ref={projects}>
+                        <h2 className={h2}>Projects</h2>
+                        <div>
+                            <span className={sectionHeading}><h3 className={h3}><a href="https://www.envtree.net/" target="_blank" rel="noreferrer" className="hover:italic">Env Tree</a></h3></span>
+                            <span className={sectionBody}>
+                                <p>A simple system to help facilitate the sharing of .env like files between team members and production deployments.</p>
+                                <p>
+                                    I created this due to an influx of new team members and also due to issues in production from .env settings files which would have
+                                    been caught if there was higher visibility throughout the development and DevOps teams over what was set and where.
+                                </p>
+                                <ul className={styles.sectionList}>
+                                    <li>Features
+                                        <ul>
+                                            <li>Projects to group configurations together</li>
+                                            <li>Projects can be shared with other users allowing easy onboarding of new team members</li>
+                                            <li>Configurations can be linked to each other</li>
+                                            <li>CLI tool to allow easy downloading of configuration files in both general purpose and headless environments</li>
+                                            <li>Selfhostable with provided docker image</li>
+                                        </ul>
+                                    </li>
+                                    <li>Tech: Typescript, NextJS, Prisma, TRPC, Turborepo</li>
                                 </ul>
                             </span>
                         </div>
