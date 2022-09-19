@@ -66,10 +66,8 @@ const CV = () => {
                             <span className={contactItem}><BsPhoneFill/> <span>07753 660179</span></span>
                             <a href="mailto:max.rose366@gmail.com?subject=Contact from Website" className={contactItem}><GrMail/> <span>max.rose366@gmail.com</span></a>
                             <Link href="/"><a target="_blank" rel="noreferrer" className={contactItem}><MdWebAsset/> <span>max-rose.com</span></a></Link>
-                            <a href={githubLink} target="_blank"
-                               rel="noreferrer" className={contactItem}><AiOutlineGithub/> <span>github.com/maxs-rose</span></a>
-                            <a href={linkedinLink}  target="_blank"
-                               rel="noreferrer" className={contactItem}><AiFillLinkedin/> <span>linkedin.com/in/maximilanrose</span></a>
+                            <a href={githubLink} target="_blank" rel="external" className={contactItem}><AiOutlineGithub/> <span>github.com/maxs-rose</span></a>
+                            <a href={linkedinLink}  target="_blank" rel="external" className={contactItem}><AiFillLinkedin/> <span>linkedin.com/in/maximilanrose</span></a>
                         </div>
                     </section>
                     <section className={sectionStart} ref={employment}>

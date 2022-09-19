@@ -1,19 +1,21 @@
 import About from "@components/About";
 import Landing from "@components/Landing";
+import Projects from "@components/Projects";
 import useKeybindings from "@hooks/useKeybindings";
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 
 const Home: NextPage = () => {
     const about = useRef<HTMLElement>(null);
     const landing = useRef<HTMLElement>(null);
+    const projects = useRef<HTMLElement>(null);
 
-    const scrollDown = () => about.current?.scrollIntoView({ block: "start", behavior: "smooth" });
-    const scrollUp = () => landing.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+    const scrollTo = (ref: RefObject<HTMLElement>) => () => ref.current?.scrollIntoView({ block: "start", behavior: "smooth" });
 
-    useKeybindings("about", scrollDown);
-    useKeybindings("home", scrollUp);
+    useKeybindings("about", scrollTo(about));
+    useKeybindings("home", scrollTo(landing));
+    useKeybindings("prod", scrollTo(projects));
 
     return (
             <>
@@ -26,9 +28,11 @@ const Home: NextPage = () => {
                 <section className="w-full h-screen flex flex-col justify-center items-center select-none" ref={landing}>
                     <Landing/>
                 </section>
-                <span onClick={scrollDown} ref={about} id="scrollDown"/>
+                <span onClick={scrollTo(about)} ref={about} id="scrollDown"/>
                 <section className="w-full flex flex-col justify-center items-center select-none">
                     <About/>
+                    <span ref={projects} />
+                    <Projects/>
                 </section>
                 <div style={{ "padding": "2rem" }}/>
             </>
