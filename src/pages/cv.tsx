@@ -78,7 +78,7 @@ const CV = () => {
                                     <h3 className={h3}>MRI Software</h3>
                                     <small>2021 - present</small>
                                 </div>
-                                <small>Title: Software Engineer I</small>
+                                <small>Title: Software Engineer</small>
                                 <small>Role: Fullstack software engineer and lead for small internal projects</small>
                             </span>
                             <span className={sectionBody}>
