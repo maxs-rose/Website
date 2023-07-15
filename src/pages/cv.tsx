@@ -1,14 +1,14 @@
-import { githubLink, linkedinLink } from "@constants/*";
+import {githubLink, linkedinLink} from "@constants/*";
 import useKeybindings from "@hooks/useKeybindings";
 import styles from "@styles/cv.module.css";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { RefObject, useRef } from "react";
-import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
-import { BsPhoneFill } from "react-icons/bs";
-import { GrMail } from "react-icons/gr";
-import { MdWebAsset } from "react-icons/md";
+import {useRouter} from "next/router";
+import {RefObject, useRef} from "react";
+import {AiFillLinkedin, AiOutlineGithub} from "react-icons/ai";
+import {BsPhoneFill} from "react-icons/bs";
+import {GrMail} from "react-icons/gr";
+import {MdWebAsset} from "react-icons/md";
 
 const h2 = "text-4xl mb-2 text-center";
 const h3 = "text-2xl";
@@ -76,7 +76,7 @@ const CV = () => {
                             <span className={sectionItemHeader}>
                                 <div className={sectionHeading}>
                                     <h3 className={h3}>MRI Software</h3>
-                                    <small>2021 - present</small>
+                                    <small>August 2021 - April 2023</small>
                                 </div>
                                 <small>Title: Software Engineer</small>
                                 <small>Role: Fullstack software engineer and lead for small internal projects</small>
