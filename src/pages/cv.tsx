@@ -58,7 +58,8 @@ const CV = () => {
                             I am a fast learner and a comprehensive person.
                             I have an interest in cyber-physical systems with my dissertation concerning improving the
                             design space exploration techniques available within the INTO-CPS co-modelling
-                            toolchain.</p>
+                            toolchain.
+                        </p>
                     </section>
                     <section className="flex flex-col justify-center mt-2" ref={contact}>
                         <h2 className={h2}>Contact</h2>
@@ -72,6 +73,21 @@ const CV = () => {
                     </section>
                     <section className={sectionStart} ref={employment}>
                         <h2 className={h2}>Employment</h2>
+                        <div>
+                            <span className={sectionItemHeader}>
+                                <div className={sectionHeading}>
+                                    <h3 className={h3}>Strive Gaming</h3>
+                                    <small>May 2023 - present</small>
+                                </div>
+                                <small>Title: Software Engineer</small>
+                                <small>Role: Backend .NET engineer</small>
+                            </span>
+                            {/*<span className={sectionBody}>*/}
+                            {/*    <div>*/}
+                            {/*        <p>sfsdfsd</p>*/}
+                            {/*    </div>*/}
+                            {/*</span>*/}
+                        </div>
                         <div>
                             <span className={sectionItemHeader}>
                                 <div className={sectionHeading}>
