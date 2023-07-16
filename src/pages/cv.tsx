@@ -83,11 +83,38 @@ const CV = () => {
                                 <small>Title: Software Engineer</small>
                                 <small>Role: Backend .NET engineer</small>
                             </span>
-                            {/*<span className={sectionBody}>*/}
-                            {/*    <div>*/}
-                            {/*        <p>sfsdfsd</p>*/}
-                            {/*    </div>*/}
-                            {/*</span>*/}
+                            <span className={sectionBody}>
+                                <p>
+                                    As this role is within a small startup, I have been given opportunities to work closely
+                                    with multiple different departments which includes but is not limited to:
+                                </p>
+                                <p>
+                                    <b>DevOps/Platform Engineering</b> to develop and deliver GitOps practices within the development
+                                    team. I have also worked closely with the team to setup internal development environments
+                                    allowing other developers to integrate new features more confidently into the platform.
+                                    This has also allowed me to work with Kubernetes.
+                                </p>
+                                <p>
+                                    The <b>Data team</b> talking to them and understanding what they need from the platform
+                                    so that they can produce effective report for regulators and clients.
+                                </p>
+                                <p>
+                                    <b>System architects</b> researching new technologies and ways of integrating them into the platform
+                                    such that it can be more effectively worked in moving forward without being tied to older
+                                    design patterns. I also fill in for the architect in external meetings if he is not available.
+                                </p>
+                                <ul className={styles.sectionList}>
+                                    <li>Key Points
+                                        <ul>
+                                            <li>Working withing a large .NET codebase to deliver new features</li>
+                                            <li>Setup testing and full CI/CD pipeline within the core projects</li>
+                                            <li>Worked closely with DevOps/Platform engineering</li>
+                                            <li>Worked with system architects being trusted to fill in when architect was unavailable</li>
+                                            <li>Worked with clients directly solving technical integration issues</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </span>
                         </div>
                         <div>
                             <span className={sectionItemHeader}>
