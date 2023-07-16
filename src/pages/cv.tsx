@@ -111,6 +111,8 @@ const CV = () => {
                                             <li>Handled various technical support issues as 3rd line support</li>
                                             <li>Worked on implementing e2e performance testing</li>
                                             <li>Investigated and implemented Server Sent Events after comparison with alternative options</li>
+                                            <li>Assisted and guided graduates and placement students</li>
+                                            <li>Reworked configuration system such that changes no longer required a system restart</li>
                                             <li>Tech: Java (Dropwizard API), Angular, TypeScript, PostgreSQL, Auth0, GitLab CI</li>
                                         </ul>
                                     </li>
