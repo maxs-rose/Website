@@ -53,7 +53,7 @@ const CV = () => {
                     <section ref={title}>
                         <h1 className="text-center p-8 text-6xl">Maximilian Rose</h1>
                         <p>
-                            I am an experienced software engineer with a strong background in in full-stack development.
+                            I am an experienced software engineer with a strong background in full-stack development.
                             My skill set includes Java, TypeScript, and .NET possessing experience in platform engineering.
                             By leveraging my expertise, I can successfully navigate projects from start to finish,
                             ensuring the delivery of high-quality products to clients. With a diverse tech stack at my
