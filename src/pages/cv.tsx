@@ -51,7 +51,7 @@ const CV = () => {
                     <meta name="description" content="Max Rose's CV"/>
                 </Head>
                 <div className={styles.container}>
-                    <Link href="/"><a className="print:hidden absolute hover:italic">&lt; Home</a></Link>
+                    <Link href="/" prefetch={true} legacyBehavior={true}><a className="print:hidden absolute hover:italic">&lt; Home</a></Link>
                     <section ref={title}>
                         <h1 className="text-center p-8 text-6xl">Maximilian Rose</h1>
                         <p>
