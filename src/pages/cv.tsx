@@ -29,7 +29,6 @@ const CV = () => {
     const employment = useRef<HTMLElement>(null);
     const projects = useRef<HTMLElement>(null);
     const education = useRef<HTMLElement>(null);
-    const tech = useRef<HTMLElement>(null);
 
     const scrollTo = (ref: RefObject<HTMLElement>) => () => ref.current?.scrollIntoView({ block: "start", behavior: "smooth" });
 
@@ -41,7 +40,6 @@ const CV = () => {
     useKeybindings("emp", scrollTo(employment));
     useKeybindings("prod", scrollTo(projects));
     useKeybindings("edu", scrollTo(education));
-    useKeybindings("tech", scrollTo(tech));
 
     return (
             <>
@@ -233,19 +231,6 @@ const CV = () => {
                                         </ul>
                                     </li>
                                 </ul>
-                            </span>
-                        </div>
-                    </section>
-                    <section className={sectionStart} ref={tech}>
-                        <h2 className={h2}>Tech</h2>
-                        <div>
-                            <span>
-                                <h3 className={h3}>Industry experience</h3>
-                                <p className="mt-2 mb-2 indent-4">Java, API Design, Angular, TypeScript</p>
-                            </span>
-                            <span>
-                                <h3 className={h3}>Interested in (no industry experience)</h3>
-                                <p className="mt-2 mb-2 indent-4">C#, C++, React, NextJS, NestJS, Microservices & Monorepos, Prisma, Serverless Functions</p>
                             </span>
                         </div>
                     </section>
