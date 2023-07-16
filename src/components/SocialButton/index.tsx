@@ -1,5 +1,7 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 import styles from "./SocialButton.module.css"
+
+export const socialStyles = styles;
 
 const SocialButton: React.FC<{ children?: ReactNode, link?: string, title?: string, target?: "_self" | "_blank" }> = ({ children, link, title, target = "_blank"}) => {
     const displayTitle = () => {
