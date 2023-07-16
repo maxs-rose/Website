@@ -55,12 +55,11 @@ const CV = () => {
                     <section ref={title}>
                         <h1 className="text-center p-8 text-6xl">Maximilian Rose</h1>
                         <p>
-                            I am an ambitious and responsible individual highly motivated to pursue a career in the
-                            technology field currently working as a full stack engineer software engineer.
-                            I am a fast learner and a comprehensive person.
-                            I have an interest in cyber-physical systems with my dissertation concerning improving the
-                            design space exploration techniques available within the INTO-CPS co-modelling
-                            toolchain.
+                            I am an experienced software engineer with a strong background in in full-stack development.
+                            My skill set includes Java, TypeScript, and .NET possessing experience in platform engineering.
+                            By leveraging my expertise, I can successfully navigate projects from start to finish,
+                            ensuring the delivery of high-quality products to clients. With a diverse tech stack at my
+                            disposal, I am well-equipped to handle various challenges and provide innovative solutions.
                         </p>
                     </section>
                     <section className="flex flex-col justify-center mt-2" ref={contact}>
