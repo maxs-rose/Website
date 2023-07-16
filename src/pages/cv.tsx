@@ -249,16 +249,6 @@ const CV = () => {
                             </span>
                         </div>
                     </section>
-                    <section className={sectionStart} ref={tech}>
-                        <h2 className={h2}>Other Skills & Qualifications</h2>
-                        <div>
-                            <ul>
-                                <li></li>
-                                <li>Certified SolidWorks mechanical design professional</li>
-                                <li>Archery</li>
-                            </ul>
-                        </div>
-                    </section>
                 </div>
             </>
     )
