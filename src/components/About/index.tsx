@@ -1,10 +1,10 @@
 import SectionHeader from "@components/SectionHeader";
 import SocialButton from "@components/SocialButton";
-import { BiTestTube } from "react-icons/bi";
-import { DiAngularSimple, DiJava, DiPostgresql } from "react-icons/di";
-import { FaGitAlt, FaHatWizard, FaNodeJs, FaReact } from "react-icons/fa";
-import { GiBowman } from "react-icons/gi";
-import { SiCsharp, SiDassaultsystemes, SiDotnet, SiTypescript } from "react-icons/si";
+import {BiTestTube} from "react-icons/bi";
+import {DiAngularSimple, DiJava, DiPostgresql} from "react-icons/di";
+import {FaGitAlt, FaHatWizard, FaNodeJs, FaReact} from "react-icons/fa";
+import {GiBowman} from "react-icons/gi";
+import {SiCsharp, SiDassaultsystemes, SiDotnet, SiTypescript} from "react-icons/si";
 
 const About = () => {
     const aboutBadgeContainer = "w-full max-w-[20em] bg-background-alt rounded p-4 flex flex-row flex-wrap justify-evenly items-center badgeContainer";
@@ -15,8 +15,15 @@ const About = () => {
                     <h2 className="text-4xl">About</h2>
                 </SectionHeader>
                 <div className="bg-background-alt rounded p-4 space-y-4">
-                    <p>I am an ambitious and responsible individual highly motivated to pursue a career in the technology field.</p>
-                    <p>Throughout my work I have proven myself to be a fast learner and self motivated with an interest in Cyber-Physical Systems but the ability to apply myself fully in any role.</p>
+                    <p>
+                        I am an experienced software engineer with a strong background in full-stack development.
+                    </p>
+                    <p>
+                        My skill set includes Java, TypeScript, and .NET possessing experience in platform engineering.
+                        By leveraging my expertise, I can successfully navigate projects from start to finish,
+                        ensuring the delivery of high-quality products to clients. With a diverse tech stack at my
+                        disposal, I am well-equipped to handle various challenges and provide innovative solutions.
+                    </p>
                 </div>
                 <section className="flex flex-row flex-wrap justify-evenly">
                     <div>
