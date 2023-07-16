@@ -143,7 +143,7 @@ const CV = () => {
                                     <li>Income Analytics: Data Generator
                                         <ul>
                                             <li>This is a project that I took the lead on</li>
-                                            <li>Project was to generate random but repeatable test data that can be used during development of the system to endure that all features worked as intended</li>
+                                            <li>Project was to generate random but repeatable test data that can be used during development of the system to ensure that all features worked as intended</li>
                                             <li>Tech: Java, Bash</li>
                                         </ul>
                                     </li>
