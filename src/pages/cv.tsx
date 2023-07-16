@@ -33,7 +33,9 @@ const CV = () => {
 
     const scrollTo = (ref: RefObject<HTMLElement>) => () => ref.current?.scrollIntoView({ block: "start", behavior: "smooth" });
 
-    useKeybindings("home", () => router.push("/").then());
+    useKeybindings("home", () => {
+        router.push("/").then();
+    });
     useKeybindings("title", scrollTo(title));
     useKeybindings("contact",scrollTo(contact));
     useKeybindings("emp", scrollTo(employment));
