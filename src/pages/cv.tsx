@@ -204,12 +204,12 @@ const CV = () => {
                                             <li>Tech: Python</li>
                                         </ul>
                                     </li>
-                                    <li>Fruit Wizard
-                                        <ul>
-                                            <li>This was a project that gave me valuable experience writing performant, modular, and generic code in C++</li>
-                                            <li>Tech: C++</li>
-                                        </ul>
-                                    </li>
+                                    {/*<li>Fruit Wizard*/}
+                                    {/*    <ul>*/}
+                                    {/*        <li>This was a project that gave me valuable experience writing performant, modular, and generic code in C++</li>*/}
+                                    {/*        <li>Tech: C++</li>*/}
+                                    {/*    </ul>*/}
+                                    {/*</li>*/}
                                 </ul>
                                 <h4 className={h4}>Other Experience</h4>
                                 <ul className={styles.sectionList}>
