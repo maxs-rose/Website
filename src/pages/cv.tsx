@@ -104,7 +104,7 @@ const CV = () => {
                                 <ul className={styles.sectionList}>
                                     <li>Key Points
                                         <ul>
-                                            <li>Working withing a large .NET codebase to deliver new features</li>
+                                            <li>Working within a large .NET codebase to deliver new features</li>
                                             <li>Setup testing and full CI/CD pipeline within the core projects</li>
                                             <li>Worked closely with DevOps/Platform engineering</li>
                                             <li>Worked with system architects being trusted to fill in when architect was unavailable</li>
